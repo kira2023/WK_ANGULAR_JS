@@ -1,0 +1,33 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/kira2023/WK_ANGULAR_JS.git",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-loader": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "html5-boilerplate": "0.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.7.5",
+    "cpx": "^1.5.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "http-server": "^0.11.1",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^1.1.2",
+    "node-sass": "^4.12.0",
+    "protractor": "^5.4.1"
+  },
+  "scripts": {
+    "start": "http-server"
+  }
+}
