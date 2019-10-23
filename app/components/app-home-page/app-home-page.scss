@@ -1,0 +1,29 @@
+.home-page {
+}
+.home-page-content {
+	width: 80%;
+	margin: auto;
+}
+.search-wrapper {
+	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
+}
+.app-course-search {
+	width: 50%;
+}
+.add-button {
+	min-width: 120px;
+	padding: 10px 15px;
+	background: transparent;
+	border: 1px solid #3f3f3f;
+	border-radius: 4px;
+	cursor: pointer;
+	
+	&:hover {
+		background: #0a82a0;
+		border: none;
+		color: white;
+		box-shadow: 0px 0px 6px -1px #000000;
+	}
+}

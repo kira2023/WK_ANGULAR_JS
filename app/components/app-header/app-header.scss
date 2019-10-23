@@ -1,0 +1,47 @@
+.header {
+	padding: 10px;
+}
+.header-content {
+	width: 80%;
+	margin: auto;
+  display: flex;
+	justify-content: space-between;
+}
+.logotype-wrapper {
+	display: flex;
+	align-items: center;
+};
+.logotype-icon {
+	color: #3f3f3f;
+	font-size: 30px;
+	margin-right: 5px;
+}
+.logotype-title {
+	margin: 0px;
+	color: #3f3f3f;
+	font-family: 'Londrina Solid', cursive;
+}
+.header-login-wrapper {
+	display: flex;
+	align-items: center;
+}
+.header-login-user {
+	color: rgb(59, 58, 58);
+	margin-right: 10px;
+}
+.header-login-button {
+	min-width: 120px;
+	padding: 10px 15px;
+	background: transparent;
+	border: 1px solid #3f3f3f;
+	border-radius: 4px;
+	cursor: pointer;
+	
+	&:hover {
+		background: #0a82a0;
+		border: none;
+		color: white;
+		box-shadow: 0px 0px 6px -1px #000000;
+	}
+}
+

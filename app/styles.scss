@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+  &:focus {
+	  outline: 1px solid #0a82a0;
+  }
+};
+html, body {
+  height: 100%;
+}
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.page-content {
+  flex: 1 0 auto;
+}
