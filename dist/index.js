@@ -1,8 +1,8 @@
 angular.module('myApp', []);
 
 angular
-  .module('myApp')
-  .factory('courseService', function () {
+	.module('myApp')
+	.factory('courseService', function () {
 		var data = [
 			{
 				id: 1,
@@ -59,7 +59,7 @@ angular
 		}
 
 		function deleteDataById(id) {
-			data = data.filter(function(item) {
+			data = data.filter(function (item) {
 				return item.id !== id;
 			});
 		}
@@ -67,7 +67,7 @@ angular
 		function addData(course) {
 			course.id = data[data.length - 1] + 1;
 			course.date = new Date().toLocaleDateString();
-	
+
 			data.push(course);
 		}
 	});
@@ -121,6 +121,16 @@ angular
     templateUrl: './app/components/app-home-page/app-home-page.html',
     controller: AppHomePage
   })
+function AppBreadcrumbs() {
+  let $ctrl = this;
+}
+
+angular
+  .module('myApp')
+  .component('appBreadcrumbs', {
+    templateUrl: './app/components/app-home-page/components/app-breadcrumbs/app-breadcrumbs.html',
+    controller: AppBreadcrumbs
+  })
 function AppCourseList() {
   let $ctrl = this;
 
@@ -168,16 +178,6 @@ angular
       cancelCreation: '&',
       createCourse: '&',
     }
-  })
-function AppBreadcrumbs() {
-  let $ctrl = this;
-}
-
-angular
-  .module('myApp')
-  .component('appBreadcrumbs', {
-    templateUrl: './app/components/app-home-page/components/app-breadcrumbs/app-breadcrumbs.html',
-    controller: AppBreadcrumbs
   })
 function AppCourseItem() {
   let $ctrl = this;
