@@ -1,19 +1,24 @@
+@import '../../../../styles/variables.scss';
+
 .breadcrumbs {
 	padding: 10px;
 }
+
 .nav-wrapper {
 	list-style-type: none;
   display: flex;
   justify-content: space-between;
 }
+
 .nav-item {
 	font-size: 20px;
 }
+
 .nav-link {
 	text-decoration: none;
-	color: #3f3f3f;	
+	color: $color-eclipse;	
 
 	&:hover {
-		color: #06586d;	
+		color: $color-eastern-blue;	
 	}
 }

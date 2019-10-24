@@ -1,52 +1,51 @@
+@import '../../../../../styles/variables.scss';
+
 .course-item {
 	min-height: 150px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
-	border: 1px solid #3f3f3f;
-	border-radius: 4px;
-};
+	border: 1px solid $color-eclipse;
+	border-radius: 20px;
+}
+
 .course-item-content {
 	width: 80%;
 }
+
 .course-item-header {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
 }
+
 .course-item-title {
+	color: $color-blue-lagoon;
 }
+
 .course-item-info {
 	display: flex;
 	justify-content: space-between;
 }
+
 .course-item-info > * {
 	margin-right: 10px;
 	font-size: 20px;
-	color: #3f3f3f;
+	color: $color-blue-lagoon;
 }
+
 .course-item-note {
-	color: #767676;
+	color: $color-grey;
 }
+
 .course-item-tools {
+	height: 100px;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 }
+
 .course-item-button {
 	margin-bottom: 5px;
-	min-width: 120px;
-	padding: 10px 15px;
-	background: transparent;
-	border: 1px solid #3f3f3f;
-	border-radius: 4px;
-	cursor: pointer;
-	
-	&:hover {
-		background: #0a82a0;
-		border: none;
-		color: white;
-		box-shadow: 0px 0px 6px -1px #000000;
-	}
 }

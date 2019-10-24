@@ -1,25 +1,12 @@
 .search {
+	height: 45px;
 	display: flex;
 	justify-content: space-between;
 }
+
 .search-input {
 	flex-grow: 1;
-	padding: 5px;
-	border-radius: 4px;
+	padding: 5px 10px;
+	border-radius: 20px;
 	margin-right: 15px;
-}
-.search-button {
-	min-width: 120px;
-	padding: 10px 15px;
-	border-radius: 4px;
-	background: transparent;
-	border: 1px solid #3f3f3f;
-	cursor: pointer;
-	
-	&:hover {
-		background: #0a82a0;
-		border: none;
-		color: white;
-		box-shadow: 0px 0px 6px -1px #000000;
-	}
 }
