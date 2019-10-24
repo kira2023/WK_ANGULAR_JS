@@ -3,12 +3,23 @@ function AppHomePage(courseService) {
 
   $ctrl.$onInit = function() {
     $ctrl.courses = courseService.getData();
+    $ctrl.isCreationMode = false;
   };
   
   $ctrl.handleDeleteCourse = function(courseId) {
     courseService.deleteDataById(courseId);
     $ctrl.courses = courseService.getData();
   }
+
+  $ctrl.toggleCreationMode = function() {
+    $ctrl.isCreationMode = !$ctrl.isCreationMode;
+  }
+
+  $ctrl.createCourse = function(course) {
+    courseService.addData(course);
+    $ctrl.toggleCreationMode();
+  }
+
 };
 
 angular

@@ -1,5 +1,6 @@
 function AppCourseItem() {
   let $ctrl = this;
+
   $ctrl.handleDelete = function() {
     $ctrl.onDelete({courseId: $ctrl.course.id})
   };

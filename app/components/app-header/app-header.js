@@ -1,6 +1,5 @@
 function AppHeader() {
   let $ctrl = this;
-  $ctrl.title = 'FFFFFF';
 }
 
 angular

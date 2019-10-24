@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .home-page {
 }
 .home-page-content {
@@ -16,7 +18,7 @@
 	min-width: 120px;
 	padding: 10px 15px;
 	background: transparent;
-	border: 1px solid #3f3f3f;
+	border: 1px solid $border-color;
 	border-radius: 4px;
 	cursor: pointer;
 	

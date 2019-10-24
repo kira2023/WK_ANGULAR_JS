@@ -49,6 +49,7 @@ angular
 		return {
 			getData: getData,
 			deleteDataById: deleteDataById,
+			addData: addData,
 		}
 
 		function getData() {
@@ -61,4 +62,10 @@ angular
 			});
 		}
 
+		function addData(course) {
+			course.id = data[data.length - 1] + 1;
+			course.date = new Date().toLocaleDateString();
+	
+			data.push(course);
+		}
 	});

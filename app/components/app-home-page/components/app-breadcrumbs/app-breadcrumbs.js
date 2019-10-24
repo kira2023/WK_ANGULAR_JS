@@ -1,6 +1,5 @@
 function AppBreadcrumbs() {
   let $ctrl = this;
-  $ctrl.title = 'FFFFFF';
 }
 
 angular

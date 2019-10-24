@@ -51,6 +51,7 @@ angular
 		return {
 			getData: getData,
 			deleteDataById: deleteDataById,
+			addData: addData,
 		}
 
 		function getData() {
@@ -63,10 +64,25 @@ angular
 			});
 		}
 
+		function addData(course) {
+			course.id = data[data.length - 1] + 1;
+			course.date = new Date().toLocaleDateString();
+	
+			data.push(course);
+		}
 	});
-function AppFooter(courseService) {
+function AppHeader() {
   let $ctrl = this;
-  $ctrl.title = courseService.getData();
+}
+
+angular
+  .module('myApp')
+  .component('appHeader', {
+    templateUrl: './app/components/app-header/app-header.html',
+    controller: AppHeader
+  })
+function AppFooter() {
+  let $ctrl = this;
 }
 
 angular
@@ -80,12 +96,23 @@ function AppHomePage(courseService) {
 
   $ctrl.$onInit = function() {
     $ctrl.courses = courseService.getData();
+    $ctrl.isCreationMode = false;
   };
   
   $ctrl.handleDeleteCourse = function(courseId) {
     courseService.deleteDataById(courseId);
     $ctrl.courses = courseService.getData();
   }
+
+  $ctrl.toggleCreationMode = function() {
+    $ctrl.isCreationMode = !$ctrl.isCreationMode;
+  }
+
+  $ctrl.createCourse = function(course) {
+    courseService.addData(course);
+    $ctrl.toggleCreationMode();
+  }
+
 };
 
 angular
@@ -94,30 +121,9 @@ angular
     templateUrl: './app/components/app-home-page/app-home-page.html',
     controller: AppHomePage
   })
-function AppHeader() {
-  let $ctrl = this;
-  $ctrl.title = 'FFFFFF';
-}
-
-angular
-  .module('myApp')
-  .component('appHeader', {
-    templateUrl: './app/components/app-header/app-header.html',
-    controller: AppHeader
-  })
-function AppBreadcrumbs() {
-  let $ctrl = this;
-  $ctrl.title = 'FFFFFF';
-}
-
-angular
-  .module('myApp')
-  .component('appBreadcrumbs', {
-    templateUrl: './app/components/app-home-page/components/app-breadcrumbs/app-breadcrumbs.html',
-    controller: AppBreadcrumbs
-  })
 function AppCourseList() {
   let $ctrl = this;
+
   $ctrl.handleDelete = function(courseId) {
     $ctrl.onDeleteCourse({courseId: courseId});
   }
@@ -130,12 +136,21 @@ angular
     controller: AppCourseList,
     bindings: {
       courses: '<',
-      onDeleteCourse: '&'
+      onDeleteCourse: '&',
     }
+  })
+function AppBreadcrumbs() {
+  let $ctrl = this;
+}
+
+angular
+  .module('myApp')
+  .component('appBreadcrumbs', {
+    templateUrl: './app/components/app-home-page/components/app-breadcrumbs/app-breadcrumbs.html',
+    controller: AppBreadcrumbs
   })
 function AppCourseSearch() {
   let $ctrl = this;
-  $ctrl.title = 'FFFFFF';
 }
 
 angular
@@ -144,8 +159,29 @@ angular
     templateUrl: './app/components/app-home-page/components/app-course-search/app-course-search.html',
     controller: AppCourseSearch
   })
+function AppCreatingForm() {
+  let $ctrl = this;
+
+  $ctrl.newCourse = {
+    title: '',
+    time: 0,
+    note: '',
+  }
+};
+
+angular
+  .module('myApp')
+  .component('appCreatingForm', {
+    templateUrl: './app/components/app-home-page/components/app-creating-form/app-creating-form.html',
+    controller: AppCreatingForm,
+    bindings: {
+      cancelCreation: '&',
+      createCourse: '&',
+    }
+  })
 function AppCourseItem() {
   let $ctrl = this;
+
   $ctrl.handleDelete = function() {
     $ctrl.onDelete({courseId: $ctrl.course.id})
   };

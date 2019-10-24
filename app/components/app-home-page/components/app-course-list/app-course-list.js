@@ -1,5 +1,6 @@
 function AppCourseList() {
   let $ctrl = this;
+
   $ctrl.handleDelete = function(courseId) {
     $ctrl.onDeleteCourse({courseId: courseId});
   }
@@ -12,6 +13,6 @@ angular
     controller: AppCourseList,
     bindings: {
       courses: '<',
-      onDeleteCourse: '&'
+      onDeleteCourse: '&',
     }
   })

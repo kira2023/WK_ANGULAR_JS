@@ -1,6 +1,5 @@
 function AppCourseSearch() {
   let $ctrl = this;
-  $ctrl.title = 'FFFFFF';
 }
 
 angular

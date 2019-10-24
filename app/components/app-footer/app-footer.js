@@ -1,6 +1,5 @@
-function AppFooter(courseService) {
+function AppFooter() {
   let $ctrl = this;
-  $ctrl.title = courseService.getData();
 }
 
 angular
