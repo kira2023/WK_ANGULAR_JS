@@ -71,16 +71,6 @@ angular
 			data.push(course);
 		}
 	});
-function AppHeader() {
-  let $ctrl = this;
-}
-
-angular
-  .module('myApp')
-  .component('appHeader', {
-    templateUrl: './app/components/app-header/app-header.html',
-    controller: AppHeader
-  })
 function AppFooter() {
   let $ctrl = this;
 }
@@ -90,6 +80,16 @@ angular
   .component('appFooter', {
     templateUrl: './app/components/app-footer/app-footer.html',
     controller: AppFooter
+  })
+function AppHeader() {
+  let $ctrl = this;
+}
+
+angular
+  .module('myApp')
+  .component('appHeader', {
+    templateUrl: './app/components/app-header/app-header.html',
+    controller: AppHeader
   })
 function AppHomePage(courseService) {
   let $ctrl = this;
@@ -139,16 +139,6 @@ angular
       onDeleteCourse: '&',
     }
   })
-function AppBreadcrumbs() {
-  let $ctrl = this;
-}
-
-angular
-  .module('myApp')
-  .component('appBreadcrumbs', {
-    templateUrl: './app/components/app-home-page/components/app-breadcrumbs/app-breadcrumbs.html',
-    controller: AppBreadcrumbs
-  })
 function AppCourseSearch() {
   let $ctrl = this;
 }
@@ -178,6 +168,16 @@ angular
       cancelCreation: '&',
       createCourse: '&',
     }
+  })
+function AppBreadcrumbs() {
+  let $ctrl = this;
+}
+
+angular
+  .module('myApp')
+  .component('appBreadcrumbs', {
+    templateUrl: './app/components/app-home-page/components/app-breadcrumbs/app-breadcrumbs.html',
+    controller: AppBreadcrumbs
   })
 function AppCourseItem() {
   let $ctrl = this;

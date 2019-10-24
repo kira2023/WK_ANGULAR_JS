@@ -65,8 +65,9 @@ html, body {
   align-items: center; }
 
 .header-login-user {
-  color: #3f3f3f;
-  margin-right: 10px; }
+  font-size: 20px;
+  margin-right: 10px;
+  color: #085e73; }
 
 .search-wrapper {
   margin: 10px 0;
@@ -75,23 +76,6 @@ html, body {
 
 .app-course-search {
   width: 50%; }
-
-.breadcrumbs {
-  padding: 10px; }
-
-.nav-wrapper {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between; }
-
-.nav-item {
-  font-size: 20px; }
-
-.nav-link {
-  text-decoration: none;
-  color: #3f3f3f; }
-  .nav-link:hover {
-    color: #0a82a0; }
 
 .course > * {
   margin-bottom: 10px; }
@@ -157,6 +141,23 @@ html, body {
 
 .form--cancel-button:hover {
   background: #a90f3fe6; }
+
+.breadcrumbs {
+  padding: 10px; }
+
+.nav-wrapper {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between; }
+
+.nav-item {
+  font-size: 20px; }
+
+.nav-link {
+  text-decoration: none;
+  color: #3f3f3f; }
+  .nav-link:hover {
+    color: #0a82a0; }
 
 .course-item {
   min-height: 150px;
