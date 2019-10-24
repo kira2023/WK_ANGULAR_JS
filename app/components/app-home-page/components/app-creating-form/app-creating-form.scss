@@ -3,9 +3,9 @@
 .create-course-form {
 	display: flex;
 	flex-direction: column;
+	padding: 20px;
 	background: $color-white-smoke;
 	border-radius: 20px;
-	padding: 20px;
 }
 
 .create-course-form > * {
