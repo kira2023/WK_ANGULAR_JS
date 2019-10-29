@@ -11,7 +11,7 @@ function AppCreatingForm() {
 angular
     .module('myApp')
     .component('appCreatingForm', {
-        templateUrl: './app/components/app-home-page/components/app-creating-form/app-creating-form.html',
+        templateUrl: './app/components/app-creating-form/app-creating-form.html',
         controller: AppCreatingForm,
         bindings: {
             cancelCreation: '&',

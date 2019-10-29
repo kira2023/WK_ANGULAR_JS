@@ -5,6 +5,6 @@ function AppBreadcrumbs() {
 angular
     .module('myApp')
     .component('appBreadcrumbs', {
-        templateUrl: './app/components/app-home-page/components/app-breadcrumbs/app-breadcrumbs.html',
+        templateUrl: './app/components/app-breadcrumbs/app-breadcrumbs.html',
         controller: AppBreadcrumbs
     })

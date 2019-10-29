@@ -24,6 +24,6 @@ function AppHomePage(courseService) {
 angular
     .module('myApp')
     .component('appHomePage', {
-        templateUrl: './app/components/app-home-page/app-home-page.html',
+        templateUrl: './app/pages/app-home-page/app-home-page.html',
         controller: AppHomePage
     });

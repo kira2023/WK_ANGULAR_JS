@@ -9,7 +9,7 @@ function AppCourseItem() {
 angular
     .module('myApp')
     .component('appCourseItem', {
-        templateUrl: './app/components/app-home-page/components/app-course-list/app-course-item/app-course-item.html',
+        templateUrl: './app/components/app-course-item/app-course-item.html',
         controller: AppCourseItem,
         bindings: {
             course: '<',
