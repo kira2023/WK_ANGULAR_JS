@@ -1,30 +1,29 @@
 function AppHomePage(courseService) {
-  let $ctrl = this;
+    var $ctrl = this;
 
-  $ctrl.$onInit = function() {
-    $ctrl.courses = courseService.getData();
-    $ctrl.isCreationMode = false;
-  };
-  
-  $ctrl.handleDeleteCourse = function(courseId) {
-    courseService.deleteDataById(courseId);
-    $ctrl.courses = courseService.getData();
-  }
+    $ctrl.$onInit = function() {
+        $ctrl.courses = courseService.getData();
+        $ctrl.isCreationMode = false;
+    };
 
-  $ctrl.toggleCreationMode = function() {
-    $ctrl.isCreationMode = !$ctrl.isCreationMode;
-  }
+    $ctrl.handleDeleteCourse = function(courseId) {
+        courseService.deleteDataById(courseId);
+        $ctrl.courses = courseService.getData();
+    };
 
-  $ctrl.createCourse = function(course) {
-    courseService.addData(course);
-    $ctrl.toggleCreationMode();
-  }
+    $ctrl.toggleCreationMode = function() {
+        $ctrl.isCreationMode = !$ctrl.isCreationMode;
+    };
 
-};
+    $ctrl.createCourse = function(course) {
+        courseService.addData(course);
+        $ctrl.toggleCreationMode();
+    };
+}
 
 angular
-  .module('myApp')
-  .component('appHomePage', {
-    templateUrl: './app/components/app-home-page/app-home-page.html',
-    controller: AppHomePage
-  })
+    .module('myApp')
+    .component('appHomePage', {
+        templateUrl: './app/components/app-home-page/app-home-page.html',
+        controller: AppHomePage
+    });
