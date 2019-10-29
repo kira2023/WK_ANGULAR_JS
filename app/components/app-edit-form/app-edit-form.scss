@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.create-course-form {
+.edit-course-form {
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
@@ -8,7 +8,7 @@
 	border-radius: 20px;
 }
 
-.create-course-form > * {
+.edit-course-form > * {
 	margin-bottom: 20px;
 }
 
@@ -46,13 +46,13 @@
 	min-width: 30%;
 }
 
-.form--create-button {
+.form-create-button {
 	&:hover {
 		background: $color-persian-green;
 	}
 }
 
-.form--cancel-button {
+.form-cancel-button {
 	&:hover {
 		background: $color-cardinal;
 	}

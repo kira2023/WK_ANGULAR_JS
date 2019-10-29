@@ -1,63 +1,77 @@
 angular
     .module('myApp')
-    .factory('courseService', function () {
+    .factory('courseService', function() {
         var data = [
             {
                 id: 1,
-                title: "Video Course 1",
+                title: 'Video Course 1',
                 time: 23,
-                date: "05.10.2019",
-                note: "Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?",
+                date: '05.10.2019',
+                note: 'Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?',
             },
             {
                 id: 2,
-                title: "Video Course 2",
+                title: 'Video Course 2',
                 time: 15,
-                date: "06.12.2019",
-                note: "Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?",
+                date: '06.12.2019',
+                note: 'Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?',
             },
             {
                 id: 3,
-                title: "Video Course 3",
+                title: 'Video Course 3',
                 time: 45,
-                date: "04.09.2019",
-                note: "Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?",
+                date: '04.09.2019',
+                note: 'Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?',
             },
             {
                 id: 4,
-                title: "Video Course 4",
+                title: 'Video Course 4',
                 time: 20,
-                date: "10.02.2019",
-                note: "Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?",
+                date: '10.02.2019',
+                note: 'Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?',
             },
             {
                 id: 5,
-                title: "Video Course 5",
+                title: 'Video Course 5',
                 time: 22,
-                date: "16.04.2019",
-                note: "Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?",
+                date: '16.04.2019',
+                note: 'Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?',
             },
             {
                 id: 6,
-                title: "Video Course 6",
+                title: 'Video Course 6',
                 time: 34,
-                date: "22.11.2019",
-                note: "Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?",
-            },
+                date: '22.11.2019',
+                note: 'Lorem ipsum maiores sto repelsmo vitae accusamus facilis mollitia voluptates assumenda, dolore officiis obcaece voluptate quae? Voluptates harum amet aspernatur illum ex debitis beatae. Cupiditate fugit itaque dolore possimus odit natus, exercitationem tenetur officia sapiente nesciunt placeat doloremque iste distinctio labore sint, amet quas nemo quam voluptate accusamus ipsam animi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatem quisquam recusandae perspiciatis pariatur molestiae?',
+            }
         ];
 
         return {
             getData: getData,
             deleteDataById: deleteDataById,
             addData: addData,
-        }
+            getCourseById: getCourseById,
+            updateData: updateData
+        };
 
         function getData() {
             return data;
         }
 
+        function getCourseById(id) {
+            var course = null;
+
+            data.forEach(function(item) {
+                if (item.id === id) {
+                    course = item;
+                }
+            });
+
+            return course;
+        }
+
         function deleteDataById(id) {
-            data = data.filter(function (item) {
+            data = data.filter(function(item) {
                 return item.id !== id;
             });
         }
@@ -67,5 +81,13 @@ angular
             course.date = new Date().toLocaleDateString();
 
             data.push(course);
+        }
+
+        function updateData(course) {
+            data.forEach(function(item, i) {
+                if (item.id === course.id) {
+                    data[i] = course;
+                }
+            });
         }
     });

@@ -1,7 +1,10 @@
 <div class="course-list">
     <div class="course-list-item" ng-repeat="course in $ctrl.courses">
-        <app-course-item course="course" on-delete="$ctrl.handleDelete(courseId)">
-            </app-course-list>
+        <app-course-item
+            course="course"
+            on-delete="$ctrl.onDelete(courseId)"
+            on-edit="$ctrl.onEdit(courseId)">
+        </app-course-list>
     </div>
     <button class=" common-button course-list-button">
         Load More

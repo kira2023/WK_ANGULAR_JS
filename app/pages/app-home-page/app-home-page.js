@@ -1,9 +1,8 @@
-function AppHomePage(courseService) {
+function AppHomePage(courseService, $state) {
     var $ctrl = this;
 
     $ctrl.$onInit = function() {
         $ctrl.courses = courseService.getData();
-        $ctrl.isCreationMode = false;
     };
 
     $ctrl.handleDeleteCourse = function(courseId) {
@@ -11,13 +10,8 @@ function AppHomePage(courseService) {
         $ctrl.courses = courseService.getData();
     };
 
-    $ctrl.toggleCreationMode = function() {
-        $ctrl.isCreationMode = !$ctrl.isCreationMode;
-    };
-
-    $ctrl.createCourse = function(course) {
-        courseService.addData(course);
-        $ctrl.toggleCreationMode();
+    $ctrl.onEditCourse = function(courseId) {
+        $state.go('edit.course', { id: courseId });
     };
 }
 

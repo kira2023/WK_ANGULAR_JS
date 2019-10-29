@@ -6,6 +6,7 @@
   "repository": "https://github.com/kira2023/WK_ANGULAR_JS.git",
   "license": "MIT",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.23",
     "angular": "^1.7.5",
     "angular-loader": "^1.7.5",
     "angular-route": "^1.7.5",

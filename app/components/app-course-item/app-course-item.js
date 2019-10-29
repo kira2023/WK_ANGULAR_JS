@@ -1,8 +1,12 @@
 function AppCourseItem() {
-    let $ctrl = this;
+    var $ctrl = this;
 
     $ctrl.handleDelete = function() {
-        $ctrl.onDelete({ courseId: $ctrl.course.id })
+        $ctrl.onDelete({ courseId: $ctrl.course.id });
+    };
+
+    $ctrl.handleEdit = function() {
+        $ctrl.onEdit({ courseId: $ctrl.course.id });
     };
 }
 
@@ -14,5 +18,6 @@ angular
         bindings: {
             course: '<',
             onDelete: '&',
+            onEdit: '&'
         }
     });
