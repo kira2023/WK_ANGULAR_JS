@@ -1,5 +1,13 @@
 function AppCourseSearch() {
+    var $ctrl = this;
 
+    $ctrl.$onInit = function() {
+        $ctrl.valueSearch = '';
+    };
+
+    $ctrl.handleSearch = function() {
+        console.log($ctrl.valueSearch);
+    };
 }
 
 angular

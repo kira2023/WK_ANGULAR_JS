@@ -3,7 +3,6 @@ function AppEditPage(courseService, $state) {
 
     $ctrl.$onInit = function() {
         $ctrl.course = courseService.getCourseById(+$state.params.id);
-        console.log($ctrl.course);
     };
 
     $ctrl.goToHomePage = function() {

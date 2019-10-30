@@ -1,6 +1,6 @@
 <div class="search">
-    <input class="search-input" type="text" placeholder="Name">
-    <button class="common-button">
+    <input class="search-input" type="text" placeholder="Name" ng-model='$ctrl.valueSearch'>
+    <button class="common-button" ng-click="$ctrl.handleSearch()">
         <i class="fa fa-search" aria-hidden="true"></i>
         Search
     </button>

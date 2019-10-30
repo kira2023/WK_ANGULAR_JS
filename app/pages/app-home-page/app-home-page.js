@@ -3,6 +3,19 @@ function AppHomePage(courseService, $state) {
 
     $ctrl.$onInit = function() {
         $ctrl.courses = courseService.getData();
+        console.log('onInit');
+    };
+
+    $ctrl.$onChanges = function() {
+        console.log('onChanges');
+    };
+
+    $ctrl.$doCheck = function() {
+        console.log('doCheck');
+    };
+
+    $ctrl.$onDestroy = function() {
+        console.log('onDestroy');
     };
 
     $ctrl.handleDeleteCourse = function(courseId) {

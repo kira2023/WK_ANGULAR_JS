@@ -8,6 +8,10 @@ function AppCourseList() {
     $ctrl.onEdit = function(courseId) {
         $ctrl.onEditCourse({ courseId: courseId });
     };
+
+    $ctrl.handleLoadMore = function() {
+        console.log('Load More Click');
+    };
 }
 
 angular
