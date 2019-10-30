@@ -1,0 +1,33 @@
+<form class="create-course-form">
+	<h3 class="form-caption">
+		Course Creation
+	</h3>
+	<label class="form-item">
+		<span class="form-item-text">
+			Name Course:
+		</span>
+		<input class="form-item-input" type="text" ng-model="$ctrl.newCourse.title" placeholder="Name..."/>
+	</label>
+	<label class="form-item">
+		<span class="form-item-text">
+			Description:
+		</span>
+		<input class="form-item-input" type="text" ng-model="$ctrl.newCourse.note" placeholder="Description..."/>
+	</label>
+	<label class="form-item">
+		<span class="form-item-text">
+			Duration:
+		</span>
+		<input class="form-item-input" type="number" min="0" ng-model="$ctrl.newCourse.time"/>
+	</label>
+	<div class="form-button-wrapper">
+		<button class="common-button form-button form--create-button" type="button" ng-click="$ctrl.createCourse({course: $ctrl.newCourse})">
+			<i class="fa fa-plus-circle" aria-hidden="true"></i>
+			Create
+		</button>
+		<button class="common-button form-button form--cancel-button" type="button" ng-click="$ctrl.cancelCreation()">
+			<i class="fa fa-ban" aria-hidden="true"></i>
+			Cancel
+		</button>
+	</div>
+</form>	

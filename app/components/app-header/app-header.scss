@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.header {
+	padding: 10px;
+}
+
+.header-content {
+  display: flex;
+	justify-content: space-between;
+}
+
+.logotype-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.logotype-icon {
+	color: $color-eastern-blue;
+	font-size: 30px;
+	margin-right: 5px;
+}
+
+.logotype-title {
+	margin: 0px;
+	color: $color-eclipse;
+	font-family: 'Londrina Solid', cursive;
+}
+
+.header-login-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.header-login-user {
+  margin-right: 10px;
+	font-size: 20px;
+	color: $color-blue-lagoon;
+}

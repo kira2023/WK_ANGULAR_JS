@@ -1,0 +1,30 @@
+<section class="course-item">
+  <div class="course-item-content">
+    <div class="course-item-header">
+      <h2 class="course-item-title">
+        {{$ctrl.course.title}}
+      </h2>
+      <div class="course-item-info">
+        <span>
+          {{$ctrl.course.time}} min
+        </span>
+        <span>
+          {{$ctrl.course.date}}
+        </span>
+      </div>
+    </div>
+    <p class="course-item-note">
+      {{$ctrl.course.note}}
+    </p>
+  </div>
+  <div class="course-item-tools">
+    <button class="common-button course-item-button">
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      Edit
+    </button>
+    <button class="common-button course-item-button" ng-click="$ctrl.handleDelete()">
+      <i class="fa fa-trash-o" aria-hidden="true"></i>
+      Delete
+    </button>
+  </div>
+</section>

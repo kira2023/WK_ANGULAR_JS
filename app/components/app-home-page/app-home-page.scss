@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.search-wrapper {
+	margin: 10px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.app-course-search {
+	width: 50%;
+}

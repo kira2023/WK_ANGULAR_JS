@@ -3,20 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>PlayLynxes</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="dist/app.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-crossorigin="anonymous">
+  <link rel="stylesheet" href="dist/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Londrina+Solid|Patrick+Hand&display=swap" rel="stylesheet">
   <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="https://kit.fontawesome.com/a41f5fcfd0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <my-header></my-header>
-
+  <div class="app-wrapper">
+    <app-header></app-header>
+    <app-home-page class="page-content"></app-home-page> 
+    <app-footer></app-footer>
+  </div>
 
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>

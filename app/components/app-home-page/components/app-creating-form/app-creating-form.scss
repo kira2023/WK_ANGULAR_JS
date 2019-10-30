@@ -1,0 +1,59 @@
+@import '../../../../styles/variables.scss';
+
+.create-course-form {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	background: $color-white-smoke;
+	border-radius: 20px;
+}
+
+.create-course-form > * {
+	margin-bottom: 20px;
+}
+
+.form-caption {
+	text-align: center;
+	font-size: 30px;
+	color: $color-blue-lagoon;
+}
+
+.form-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.form-item-text {
+	margin-right: 10px;
+}
+
+.form-item-input {
+	flex-grow: 1;
+	max-width: 90%;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 15px;
+}
+
+.form-button-wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.form-button {
+	min-width: 30%;
+}
+
+.form--create-button {
+	&:hover {
+		background: $color-persian-green;
+	}
+}
+
+.form--cancel-button {
+	&:hover {
+		background: $color-cardinal;
+	}
+}

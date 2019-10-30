@@ -1,0 +1,51 @@
+@import '../../../../../styles/variables.scss';
+
+.course-item {
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 150px;
+	padding: 20px;
+	border: 1px solid $color-eclipse;
+	border-radius: 20px;
+}
+
+.course-item-content {
+	width: 80%;
+}
+
+.course-item-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.course-item-title {
+	color: $color-blue-lagoon;
+}
+
+.course-item-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.course-item-info > * {
+	margin-right: 10px;
+	font-size: 20px;
+	color: $color-blue-lagoon;
+}
+
+.course-item-note {
+	color: $color-grey;
+}
+
+.course-item-tools {
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.course-item-button {
+	margin-bottom: 5px;
+}

@@ -1,0 +1,17 @@
+<main class="home-page">
+  <div class="content" ng-if="!$ctrl.isCreationMode">
+    <app-breadcrumbs></app-breadcrumbs>
+    <div class="search-wrapper">
+      <app-course-search class="app-course-search"></app-course-search>
+      <button class="common-button" ng-click="$ctrl.toggleCreationMode()">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        Add course
+      </button>
+    </div>
+    <app-course-list courses="$ctrl.courses" on-delete-course="$ctrl.handleDeleteCourse(courseId)"></app-course-list>
+  </div>
+  <div class="home-page-content content" ng-if="$ctrl.isCreationMode">
+    <app-creating-form cancel-creation="$ctrl.toggleCreationMode()" create-course="$ctrl.createCourse(course)">
+    </app-creating-form>
+  </div>
+</main>

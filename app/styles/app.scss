@@ -1,0 +1,47 @@
+@import '../styles/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+
+  &:focus {
+	  outline: 1px solid $color-eastern-blue;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+}
+
+.app-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1 0 auto;
+}
+
+.common-button {
+  min-width: 120px;
+	padding: 10px 15px;
+	background: transparent;
+	border: 1px solid $color-eclipse;
+	border-radius: 20px;
+	cursor: pointer;
+	
+	&:hover {
+		background: $color-eastern-blue;
+		border: none;
+		color: $color-white;
+		box-shadow: 0px 0px 6px -1px $color-black;
+	}
+}

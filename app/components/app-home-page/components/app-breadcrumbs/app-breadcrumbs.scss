@@ -1,0 +1,24 @@
+@import '../../../../styles/variables.scss';
+
+.breadcrumbs {
+	padding: 10px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+	list-style-type: none;
+}
+
+.nav-item {
+	font-size: 20px;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: $color-eclipse;	
+
+	&:hover {
+		color: $color-eastern-blue;	
+	}
+}
