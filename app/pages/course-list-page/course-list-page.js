@@ -30,7 +30,7 @@ function AppHomePage(courseService, $state) {
 
 angular
     .module('myApp')
-    .component('appHomePage', {
-        templateUrl: './app/pages/app-home-page/app-home-page.html',
+    .component('courseListPage', {
+        templateUrl: 'app/pages/course-list-page/course-list-page.html',
         controller: AppHomePage
     });

@@ -6,7 +6,7 @@ angular.module('myApp', ['ui.router'])
             .state({
                 name: 'home',
                 url: '/home',
-                template: '<app-home-page></app-home-page>'
+                template: '<course-list-page></course-list-page>'
             });
 
         $stateProvider

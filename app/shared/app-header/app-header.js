@@ -7,6 +7,6 @@ function AppHeader(userService) {
 angular
     .module('myApp')
     .component('appHeader', {
-        templateUrl: './app/components/app-header/app-header.html',
+        templateUrl: 'app/shared/app-header/app-header.html',
         controller: AppHeader
     });

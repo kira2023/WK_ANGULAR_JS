@@ -17,7 +17,7 @@ function AppCourseList() {
 angular
     .module('myApp')
     .component('appCourseList', {
-        templateUrl: './app/components/app-course-list/app-course-list.html',
+        templateUrl: 'app/pages/course-list-page/components/app-course-list/app-course-list.html',
         controller: AppCourseList,
         bindings: {
             courses: '<',

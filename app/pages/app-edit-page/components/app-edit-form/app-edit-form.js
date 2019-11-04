@@ -14,7 +14,7 @@ function AppEditForm() {
 angular
     .module('myApp')
     .component('appEditForm', {
-        templateUrl: './app/components/app-edit-form/app-edit-form.html',
+        templateUrl: 'app/pages/app-edit-page/components/app-edit-form/app-edit-form.html',
         controller: AppEditForm,
         bindings: {
             course: '<',
