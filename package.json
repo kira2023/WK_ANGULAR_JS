@@ -19,7 +19,7 @@
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-angular": "4.0.1",
     "gulp": "4.0.2",
-    "gulp-clean": "0.4.0",
+    "del": "5.1.0",
     "gulp-concat": "2.6.1",
     "gulp-sass": "4.0.2",
     "http-server": "0.11.1",
