@@ -2,11 +2,11 @@ function AppCourseSearch() {
     var $ctrl = this;
 
     $ctrl.$onInit = function() {
-        $ctrl.valueSearch = '';
+        $ctrl.searchValue = '';
     };
 
     $ctrl.handleSearch = function() {
-        console.log($ctrl.valueSearch);
+        $ctrl.onSearch({ searchValue: $ctrl.searchValue });
     };
 }
 
@@ -14,5 +14,8 @@ angular
     .module('myApp')
     .component('appCourseSearch', {
         templateUrl: 'app/pages/course-list-page/components/app-course-search/app-course-search.html',
-        controller: AppCourseSearch
+        controller: AppCourseSearch,
+        bindings: {
+            onSearch: '&'
+        }
     });

@@ -7,7 +7,8 @@
 	min-height: 150px;
 	padding: 20px;
 	border: 1px solid $color-eclipse;
-	border-radius: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 .course-item-content {
@@ -20,12 +21,18 @@
 	margin-bottom: 10px;
 }
 
+.course-item-title-wrapper {
+  display: flex;
+  align-items: center;
+  color: $color-blue-lagoon;
+}
+
 .course-item-title {
-	color: $color-blue-lagoon;
+  margin-right: 10px;
 }
 
 .course-item-info {
-	display: flex;
+  display: flex;
 	justify-content: space-between;
 }
 
