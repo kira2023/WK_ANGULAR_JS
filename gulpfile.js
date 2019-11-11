@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var del = require('del');
+var webserver = require('gulp-webserver');
 
 sass.compiler = require('node-sass');
 
@@ -29,6 +30,16 @@ gulp.task('watch', function() {
     gulp.watch(scssFilesPath, gulp.series('sass'));
     gulp.watch(jsFilesPath, gulp.series('js'));
 
+});
+
+gulp.task('server', function() {
+    gulp.src('./')
+        .pipe(webserver({
+            livereload: true,
+            directoryListing: true,
+            open: '/index.html',
+            fallback: 'index.html'
+        }));
 });
 
 gulp.task('default', gulp.parallel('clean', 'sass', 'js'));
