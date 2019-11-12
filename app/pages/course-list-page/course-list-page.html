@@ -1,0 +1,16 @@
+<main class="home-page">
+    <div class="content">
+        <div class="search-wrapper">
+            <app-course-search class="app-course-search"></app-course-search>
+            <button class="common-button" ui-sref="edit">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                Add course
+            </button>
+        </div>
+        <app-course-list
+            courses="$ctrl.courses"
+            on-delete-course="$ctrl.handleDeleteCourse(courseId)"
+            on-edit-course="$ctrl.onEditCourse(courseId)">
+        </app-course-list>
+    </div>
+</main>
