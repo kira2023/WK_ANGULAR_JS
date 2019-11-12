@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+@mixin form() {
+  display: flex;
+	flex-direction: column;
+	padding: 20px;
+	box-shadow: 5px -5px 14px 0px #b9b3b3e0;
+	border-radius: 20px;
+}
+
+@mixin form-input($max-width) {
+	flex-grow: 1;
+	max-width: $max-width;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 15px;
+}
+
+@mixin form-caption($margin-bottom) {
+  margin-bottom: $margin-bottom;
+  text-align: center;
+	font-size: 30px;
+  color: $color-blue-lagoon;
+}
+
+@mixin form-item($margin-bottom) {
+	display: flex;
+	align-items: center;
+  justify-content: space-between;
+  margin-bottom: $margin-bottom;
+}
+
+@mixin form-item-text($font-size) {
+  font-size: $font-size;
+  margin-right: 10px;
+}
+
+@mixin form-button() {
+  min-width: 30%;
+}

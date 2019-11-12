@@ -1,0 +1,28 @@
+<form class="login-form">
+    <h3 class="login-form-caption">
+        Login
+    </h3>
+    <label class="login-form-item">
+        <span class="login-form-item-text">
+            Email:
+        </span>
+        <input class="login-form-input" type="text" ng-model="$ctrl.userInfo.email" placeholder="Email..." />
+    </label>
+    <label class="login-form-item">
+        <span class="login-form-item-text">
+            Password:
+        </span>
+        <input class="login-form-input" type="password" ng-model="$ctrl.userInfo.password" placeholder="**********" />
+    </label>
+    <div class="login-form-error">
+        <span ng-if="$ctrl.isLoginError">
+            Try again
+        </span>
+    </div>
+    <button class="common-button login-form-button"
+            type="button"
+            ng-click="$ctrl.onLogin()">
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        login
+    </button>
+</form>

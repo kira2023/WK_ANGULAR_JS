@@ -1,33 +1,33 @@
 <form class="edit-course-form">
-    <h3 class="form-caption">
+    <h3 class="edit-form-caption">
         Course Creation
     </h3>
-    <label class="form-item">
-        <span class="form-item-text">
+    <label class="edit-form-item">
+        <span class="edit-form-item-text">
             Name Course:
         </span>
-        <input class="form-item-input" type="text" ng-model="$ctrl.editableCourse.title" placeholder="Name..." />
+        <input class="edit-form-item-input" type="text" ng-model="$ctrl.editableCourse.title" placeholder="Name..." />
     </label>
-    <label class="form-item">
-        <span class="form-item-text">
+    <label class="edit-form-item">
+        <span class="edit-form-item-text">
             Description:
         </span>
-        <input class="form-item-input" type="text" ng-model="$ctrl.editableCourse.note" placeholder="Description..." />
+        <input class="edit-form-item-input" type="text" ng-model="$ctrl.editableCourse.note" placeholder="Description..." />
     </label>
-    <label class="form-item">
-        <span class="form-item-text">
+    <label class="edit-form-item">
+        <span class="edit-form-item-text">
             Duration:
         </span>
-        <input class="form-item-input" type="number" min="0" ng-model="$ctrl.editableCourse.time" />
+        <input class="edit-form-item-input" type="number" min="0" ng-model="$ctrl.editableCourse.time" />
     </label>
-    <div class="form-button-wrapper">
-        <button class="common-button form-button form-create-button"
+    <div class="edit-form-button-wrapper">
+        <button class="common-button edit-form-button edit-form-create-button"
                 type="button"
                 ng-click="$ctrl.saveCourse({course: $ctrl.editableCourse})">
             <i class="fa fa-plus-circle" aria-hidden="true"></i>
             Save
         </button>
-        <button class="common-button form-button form-cancel-button" type="button" ng-click="$ctrl.cancelCreation()">
+        <button class="common-button edit-form-button edit-form-cancel-button" type="button" ng-click="$ctrl.cancelCreation()">
             <i class="fa fa-ban" aria-hidden="true"></i>
             Cancel
         </button>
