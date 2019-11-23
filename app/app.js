@@ -29,13 +29,19 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             url: '/login',
             template: '<app-login-page></app-login-page>'
         });
+    $stateProvider
+        .state({
+            name: 'errorPage',
+            url: '/errorPage',
+            template: '<app-error-page></app-error-page>'
+        });
 });
 
-app.run(function($transitions, authService) {
+app.run(function($transitions, authService, $state) {
     $transitions.onStart({}, function(transitions) {
         if (transitions.to().name !== 'login') {
-            if (!authService.isAuthenticated()) {
-                location.replace(location.origin + '/login');
+            if (!authService.checkAuthentication()) {
+                $state.go('login');
 
                 return false;
             }

@@ -1,6 +1,6 @@
 angular
     .module('myApp')
-    .factory('authService', function() {
+    .factory('authService', function($rootScope, $timeout) {
         var data = [
             {
                 email: 'kira@email.com',
@@ -13,13 +13,16 @@ angular
                 token: '6hf74ncg94ndffmg8dgdbf7dnf7f8f9fj'
             }
         ];
-        var currentUser = null;
+        var authState = {
+            isAuthenticated: false,
+            currentUser: null
+        };
 
         return {
             login: login,
             logout: logout,
-            isAuthenticated: isAuthenticated,
-            getCurrentUserInfo: getCurrentUserInfo
+            getAuthState: getAuthState,
+            checkAuthentication: checkAuthentication
         };
 
         function login(userInfo) {
@@ -36,21 +39,24 @@ angular
 
         function logout() {
             localStorage.removeItem('token');
+            authState.isAuthenticated = false;
+            authState.currentUser = null;
         }
 
-        function isAuthenticated() {
+        function checkAuthentication() {
             var token = localStorage.getItem('token');
 
             if (token) {
-                currentUser = data.find(function(item) {
+                authState.currentUser = data.find(function(item) {
                     return item.token === token;
                 });
             }
+            authState.isAuthenticated = !!(authState.currentUser && token);
 
-            return !!(currentUser && token);
+            return !!(authState.currentUser && token);
         }
 
-        function getCurrentUserInfo() {
-            return currentUser || {};
+        function getAuthState() {
+            return authState;
         }
     });

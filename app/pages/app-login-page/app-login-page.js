@@ -1,4 +1,4 @@
-function AppLoginPage(authService) {
+function AppLoginPage(authService, $state) {
     var $ctrl = this;
 
     $ctrl.$onInit = function() {
@@ -12,7 +12,7 @@ function AppLoginPage(authService) {
     $ctrl.onLogin = function() {
         $ctrl.isLoginError = !authService.login($ctrl.userInfo);
         if (!$ctrl.isLoginError) {
-            location.replace(location.origin + '/home');
+            $state.go('home');
         }
     };
 }

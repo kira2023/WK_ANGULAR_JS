@@ -1,15 +1,13 @@
-function AppHeader(authService) {
+function AppHeader(authService, $state) {
     var $ctrl = this;
 
     $ctrl.$onInit = function() {
-        $ctrl.isAuthenticated = authService.isAuthenticated();
+        $ctrl.authState = authService.getAuthState();
     };
-
-    $ctrl.currentUser = authService.getCurrentUserInfo();
 
     $ctrl.onLogout = function() {
         authService.logout();
-        location.replace(location.origin + '/login');
+        $state.go('login');
     };
 }
 

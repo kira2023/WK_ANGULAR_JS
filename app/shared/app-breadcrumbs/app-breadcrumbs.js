@@ -2,7 +2,7 @@ function AppBreadcrumbs(authService) {
     var $ctrl = this;
 
     $ctrl.$onInit = function() {
-        $ctrl.isAuthenticated = authService.isAuthenticated();
+        $ctrl.isAuthenticated = authService.checkAuthentication();
     };
 }
 

@@ -8,9 +8,9 @@
         PLAY Lynxes
       </h1>
     </div>
-    <div class="header-login-wrapper" ng-if="$ctrl.isAuthenticated">
+    <div class="header-login-wrapper" ng-if="$ctrl.authState.isAuthenticated">
       <span class="header-login-user">
-          {{$ctrl.currentUser.email}}
+          {{$ctrl.authState.currentUser.email}}
       </span>
       <button class="common-button" ng-click="$ctrl.onLogout()">
         <i class="fa fa-sign-out" aria-hidden="true"></i>
