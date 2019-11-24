@@ -1,7 +1,16 @@
-function AppHeader(userService) {
+function AppHeader(authService) {
     var $ctrl = this;
 
-    $ctrl.activeUser = userService.getActiveUser();
+    $ctrl.$onInit = function() {
+        $ctrl.isAuthenticated = authService.isAuthenticated();
+    };
+
+    $ctrl.currentUser = authService.getCurrentUserInfo();
+
+    $ctrl.onLogout = function() {
+        authService.logout();
+        location.replace(location.origin + '/login');
+    };
 }
 
 angular

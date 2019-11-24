@@ -1,58 +1,43 @@
 @import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins/common.scss';
 
 .edit-course-form {
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-	background: $color-white-smoke;
-	border-radius: 20px;
+  @include form();
 }
 
-.edit-course-form > * {
-	margin-bottom: 20px;
+.edit-form-caption {
+  @include form-caption(25px);
 }
 
-.form-caption {
-	text-align: center;
-	font-size: 30px;
-	color: $color-blue-lagoon;
+.edit-form-item {
+  @include form-item(20px);
 }
 
-.form-item {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.edit-form-item-text {
+  @include form-item-text(22px);
 }
 
-.form-item-text {
-	margin-right: 10px;
+.edit-form-item-input {
+  @include form-input(90%)
 }
 
-.form-item-input {
-	flex-grow: 1;
-	max-width: 90%;
-	padding: 5px 10px;
-	border-radius: 20px;
-	margin-right: 15px;
-}
-
-.form-button-wrapper {
+.edit-form-button-wrapper {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
 
-.form-button {
-	min-width: 30%;
+.edit-form-button {
+	@include form-button();
 }
 
-.form-create-button {
+.edit-form-create-button {
 	&:hover {
 		background: $color-persian-green;
 	}
 }
 
-.form-cancel-button {
+.edit-form-cancel-button {
 	&:hover {
 		background: $color-cardinal;
 	}

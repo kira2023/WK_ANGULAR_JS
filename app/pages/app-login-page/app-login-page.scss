@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins/common.scss';
+
+.login-form {
+  width: 30%;
+  height: 300px;
+  margin: auto;
+  @include form();
+}
+
+.login-form-caption {
+  @include form-caption(20px);
+}
+
+.login-form-item {
+  @include form-item(15px);
+}
+
+.login-form-input {
+  @include form-input(80%)
+}
+
+.login-form-item-text {
+  @include form-item-text(18px);
+}
+
+.login-form-button {
+  @include form-button();
+  margin: auto;
+}
+
+.login-form-error {
+  height: 20px;
+  margin: auto;
+  color: $color-cardinal;
+}

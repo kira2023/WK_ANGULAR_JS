@@ -36,8 +36,6 @@ gulp.task('server', function() {
     gulp.src('./')
         .pipe(webserver({
             livereload: true,
-            directoryListing: true,
-            open: '/index.html',
             fallback: 'index.html'
         }));
 });
