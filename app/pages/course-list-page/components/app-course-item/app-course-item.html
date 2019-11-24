@@ -1,15 +1,18 @@
-<section class="course-item">
+<section class="course-item" course-status="{{$ctrl.course.date | date:'MM.dd.yyyy'}}" ng-class="{'top-course': $ctrl.course.topRated}">
     <div class="course-item-content">
         <div class="course-item-header">
-            <h2 class="course-item-title">
-                {{$ctrl.course.title}}
-            </h2>
+            <div class="course-item-title-wrapper">
+                <h2 class="course-item-title">
+                    {{$ctrl.course.title | uppercase}}
+                </h2>
+                <i class="fa fa-star" aria-hidden="true" ng-if="$ctrl.course.topRated"></i>
+            </div>
             <div class="course-item-info">
                 <span>
-                    {{$ctrl.course.time}} min
+                    {{$ctrl.course.time | formatDuration}}
                 </span>
                 <span>
-                    {{$ctrl.course.date}}
+                    {{$ctrl.course.date | date:'dd.MM.yyyy'}}
                 </span>
             </div>
         </div>

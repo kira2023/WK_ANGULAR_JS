@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PlayLynxes</title>
+    <base href="/">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
@@ -15,16 +16,17 @@
     <script src="https://kit.fontawesome.com/a41f5fcfd0.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body ng-cloak>
     <div class="app-wrapper">
         <app-header></app-header>
         <app-breadcrumbs></app-breadcrumbs>
         <ui-view class="page-content"></ui-view>
         <app-footer></app-footer>
     </div>
-    
+
     <script src="lib/angular/angular.js"></script>
     <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="dist/index.js"></script>
 
 </body>

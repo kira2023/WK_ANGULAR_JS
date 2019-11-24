@@ -15,14 +15,14 @@
   "devDependencies": {
     "angular-mocks": "1.7.5",
     "cpx": "1.5.0",
+    "del": "5.1.0",
     "eslint": "6.6.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-angular": "4.0.1",
     "gulp": "4.0.2",
-    "gulp-clean": "0.4.0",
     "gulp-concat": "2.6.1",
     "gulp-sass": "4.0.2",
-    "http-server": "0.11.1",
+    "gulp-webserver": "0.9.1",
     "jasmine-core": "3.3.0",
     "karma": "3.1.1",
     "karma-chrome-launcher": "2.2.0",
@@ -32,6 +32,7 @@
     "protractor": "5.4.1"
   },
   "scripts": {
-    "start": "gulp && http-server"
+    "start": "gulp server",
+    "build": "gulp && gulp server"
   }
 }

@@ -1,12 +1,15 @@
-<div class="course-list">
-    <div class="course-list-item" ng-repeat="course in $ctrl.courses">
+<div ng-if="$ctrl.courses.length">
+    <div class="course-list-item" ng-repeat="course in $ctrl.courses | orderBy:'date'">
         <app-course-item
             course="course"
             on-delete="$ctrl.onDelete(courseId)"
             on-edit="$ctrl.onEdit(courseId)">
         </app-course-item>
     </div>
-    <button class=" common-button course-list-button" ng-click="$ctrl.handleLoadMore()">
+    <button class="common-button course-list-button" ng-click="$ctrl.handleLoadMore()">
         Load More
     </button>
+</div>
+<div class="empty-course-list" ng-if="!$ctrl.courses.length">
+    No courses.
 </div>
