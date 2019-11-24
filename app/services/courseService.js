@@ -84,7 +84,7 @@ angular
         }
 
         function addData(course) {
-            course.id = data.length;
+            course.id = new Date().getUTCMilliseconds();
             course.date = new Date();
 
             data.push(course);

@@ -1,8 +1,13 @@
-function AppBreadcrumbs(authService) {
+function AppBreadcrumbs(authService, breadcrumbsService, $rootScope) {
     var $ctrl = this;
 
     $ctrl.$onInit = function() {
-        $ctrl.isAuthenticated = authService.checkAuthentication();
+        $ctrl.authState = authService.getAuthState();
+        $ctrl.breadcrumbsList = breadcrumbsService.getBreadcrumbsList();
+
+        $rootScope.$on('breadcrumbsChange', function() {
+            $ctrl.breadcrumbsList = breadcrumbsService.getBreadcrumbsList();
+        });
     };
 }
 

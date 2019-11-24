@@ -1,6 +1,6 @@
 angular
     .module('myApp')
-    .factory('authService', function($rootScope, $timeout) {
+    .factory('authService', function() {
         var data = [
             {
                 email: 'kira@email.com',

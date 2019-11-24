@@ -1,0 +1,9 @@
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__text {
+    font-size: 100px;
+  }
+}

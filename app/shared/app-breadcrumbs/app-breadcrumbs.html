@@ -1,9 +1,10 @@
-<nav class="breadcrumbs" ng-if="$ctrl.isAuthenticated">
+<nav class="breadcrumbs" ng-if="$ctrl.authState.isAuthenticated">
     <ul class="content nav-wrapper">
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                Courses
+        <li class="nav-item" ng-repeat='breadcrumb in $ctrl.breadcrumbsList'>
+            <a class="nav-link" href="#" ui-sref='{{breadcrumb.route}}'>
+                {{breadcrumb.title}}
             </a>
+            <span ng-if="!$last">/</span>
         </li>
     </ul>
 </nav>

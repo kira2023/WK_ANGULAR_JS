@@ -3,13 +3,17 @@ var app = angular.module('myApp', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.hashPrefix('');
     $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider
+        .when('/', function($state) {
+            $state.go('home');
+        })
+        .otherwise('errorPage');
 
     $stateProvider
         .state({
             name: 'home',
             url: '/home',
-            template: '<course-list-page></course-list-page>'
+            template: '<app-course-list-page></app-course-list-page>'
         });
 
     $stateProvider

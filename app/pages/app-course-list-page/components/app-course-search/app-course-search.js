@@ -13,7 +13,7 @@ function AppCourseSearch() {
 angular
     .module('myApp')
     .component('appCourseSearch', {
-        templateUrl: 'app/pages/course-list-page/components/app-course-search/app-course-search.html',
+        templateUrl: 'app/pages/app-course-list-page/components/app-course-search/app-course-search.html',
         controller: AppCourseSearch,
         bindings: {
             onSearch: '&'
